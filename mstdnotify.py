@@ -15,7 +15,7 @@ class _TextHarvester(HTMLParser):
         self.collected = []
 
     def handle_data(self, data):
-        self.collected.append(data)
+        self.collected.append(data.strip())
 
 
 def main(server_url, token, excludes):
@@ -45,7 +45,7 @@ def main(server_url, token, excludes):
             if content:
                 harvester = _TextHarvester()
                 harvester.feed(content)
-                print(' '.join(i for i in harvester.collected if i.strip()))
+                print(' '.join(i for i in harvester.collected if i))
 
             print()
             _request(session.post, server_url + '/api/v1/notifications/' + notification['id'] + '/dismiss')
