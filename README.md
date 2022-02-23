@@ -1,6 +1,6 @@
 # mstdnotify.py
 
-Command line utility: read new (and dismiss) [Mastodon](https://joinmastodon.org/) ([Pleroma](https://pleroma.social/)) notifications.
+Command line utility: read(and dismiss) new [Mastodon](https://joinmastodon.org/) ([Pleroma](https://pleroma.social/)) notifications.
 
 ## Usage mstdnotify.py
 
